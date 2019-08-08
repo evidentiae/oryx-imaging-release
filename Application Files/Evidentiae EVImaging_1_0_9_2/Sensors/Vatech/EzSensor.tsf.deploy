@@ -1,0 +1,19 @@
+[Capture application]
+DICOMInfoFile=DG_IF.ini
+DICOMPixSpacing=0.0333333\0.0333333
+DICOMVerName=Vatech HumanRay IntraOral Imager
+PACS_SaveFileName=\
+DumpTemps=0
+Final_Event=Capture Complete by Birdhead
+Final_EventError=Error by Birdhead
+Final_BroadcastMsg=EzSensor Captured
+[User Interface]
+Msg101=The driver is not installed
+Msg102=Several detectors are connected simultaneously
+Msg103=Control board is not connected
+Msg104=Unsupported Product ID
+Msg105=Device is used by another application
+Msg106=Detector is not connected to control board
+Msg107=Wrong Serial ID reported. Try to re-insert USB-plug
+txtCancel=Cancel acquisition
+txtMultConn=Multiple connections
