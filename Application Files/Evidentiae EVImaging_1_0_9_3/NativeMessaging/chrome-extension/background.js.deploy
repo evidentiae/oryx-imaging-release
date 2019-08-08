@@ -1,0 +1,61 @@
+var isConnected = false;
+var port;
+function start(json) {
+    port = chrome.runtime.connectNative("com.evidentiae.evimaging")
+    console.log(port)
+    isConnected = true;
+    console.log("Connected");
+    port.onMessage.addListener(function (msg) {
+        if (msg.text == "disconnect") {
+            isConnected = false;
+            port.disconnect();
+        }
+    })
+    port.onDisconnect.addListener(function () {
+        console.log("Disconnected");
+        isConnected = false;
+    })
+    msgNative(json)
+}
+function msgNative(msg) {
+    port.postMessage({ text: msg })
+}
+chrome.runtime.onMessageExternal.addListener(function (request, sender, sendResponse) {
+    if (!isConnected) {
+        start(request);
+        sendResponse({ "Status": true, "Result": "Starting new instance" });
+    }
+    else {
+        msgNative(request);
+        sendResponse({ "Status": true, "Result": "Continuing same instance" });
+    }
+});
+chrome.browserAction.onClicked.addListener(function (tab) {
+    var obj = { "JSESSIONID": null, "EXSessionId": null, "evidentiae": null };
+    var query = { "domain": ".evidentiae.com" };
+    chrome.cookies.getAll(query, function (cookies) {
+        if (!!cookies && cookies.length > 0) {
+            for (var i = 0; i < cookies.length; i++) {
+                if (cookies[i].name == "EXSessionId") {
+                    obj.EXSessionId = cookies[i].value;
+                } else if (cookies[i].name == "evidentiae") {
+                    obj.evidentiae = cookies[i].value;
+                } else if (cookies[i].name == "JSESSIONID") {
+                    obj.JSESSIONID = cookies[i].value;
+                }
+            }
+            if (obj.EXSessionId != null && obj.evidentiae != null && obj.JSESSIONID != null) {
+                if (!isConnected) {
+                    start(JSON.stringify(obj));
+                    sendResponse({ "Status": true, "Result": "Starting new instance" });
+                }
+                else {
+                    msgNative(JSON.stringify(obj));
+                    sendResponse({ "Status": true, "Result": "Continuing same instance" });
+                }
+                //start(JSON.stringify(obj));
+            }
+        }
+    });
+});
+
