@@ -1,0 +1,5 @@
+@echo start built-in User Interface in VADAV.DLL
+:%windir%\System32\rundll32.exe VAIOra.dll,VD_Dialog
+rundll32.exe ezSensor.dll,VD_Dialog
+:rundll32.exe vaiora.dll,VD_Dialog
+
