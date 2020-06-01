@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+<configSections>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <section name="PACS.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false"/>
+    </sectionGroup>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <section name="PACS.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false"/>
+    </sectionGroup>
+</configSections>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2"/></startup>
+    <applicationSettings>
+        <PACS.Properties.Settings>
+            <setting name="PACSServerName" serializeAs="String">
+                <value>L19_PACS_SCP64</value>
+            </setting>
+            <setting name="PACSServerPort" serializeAs="String">
+                <value>534</value>
+            </setting>
+            <setting name="PACSServerIp" serializeAs="String">
+                <value>http://direct.pacs.evidentiae.com</value>
+            </setting>
+            <setting name="PACSClientPort" serializeAs="String">
+                <value>1030</value>
+            </setting>
+            <setting name="DICOMFilesLocalPath" serializeAs="String">
+                <value>/DICOM_Files</value>
+            </setting>
+            <setting name="SensorsTempImagesPath" serializeAs="String">
+                <value>\TempImages</value>
+            </setting>
+            <setting name="PACSServerTimout" serializeAs="String">
+                <value>120</value>
+            </setting>
+            <setting name="PACSClientName" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="SopixSensorsTempImagesPath" serializeAs="String">
+                <value>\SopixTempImages</value>
+            </setting>
+            <setting name="JazzSensorsTempImagesPath" serializeAs="String">
+                <value>\JazzTempImages</value>
+            </setting>
+            <setting name="GendexSensorsTempImagesPath" serializeAs="String">
+                <value>\GendexTempImages</value>
+            </setting>
+            <setting name="PlanmecaSensorsTempImagesPath" serializeAs="String">
+                <value>\PlanmecaTempImages</value>
+            </setting>
+            <setting name="TestingVersion" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="UploadAsIsVersion" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="TwainTestPath" serializeAs="String">
+                <value>\TwainTestPath</value>
+            </setting>
+        </PACS.Properties.Settings>
+    </applicationSettings>
+    <userSettings>
+        <PACS.Properties.Settings>
+            <setting name="RealmName" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="RealmTwain" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="ImagePath" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="HostName" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="ScannerHostPort" serializeAs="String">
+                <value>5484</value>
+            </setting>
+            <setting name="ScannerUsername" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="ScannerPassword" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="DexisDicomFolderPath" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="DexisUploadedDicomFolderPath" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="SettingsSavedFirstTime" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="LoopAcquire" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="Calibration" serializeAs="String">
+                <value>{"VerticalCableDown":{ "RotateRight":0,"RotateLeft":0 },"HorizontalLeft":{ "RotateRight":0,"RotateLeft":0 },"VerticalCableUp":{ "RotateRight":0,"RotateLeft":0 },"HorizontalRight":{ "RotateRight":0,"RotateLeft":0 },"Dimensions":{"Unit":"cm","Value":0.00}}</value>
+            </setting>
+            <setting name="SopixCalibration" serializeAs="String">
+                <value>{"VerticalCableDown":{ "RotateRight":0,"RotateLeft":0 },"HorizontalLeft":{ "RotateRight":0,"RotateLeft":0 },"VerticalCableUp":{ "RotateRight":0,"RotateLeft":0 },"HorizontalRight":{ "RotateRight":0,"RotateLeft":0 },"Dimensions":{"Unit":"cm","Value":0.00}}</value>
+            </setting>
+            <setting name="CareStreamCalibration" serializeAs="String">
+                <value>{"VerticalCableDown":{ "RotateRight":0,"RotateLeft":0 },"HorizontalLeft":{ "RotateRight":0,"RotateLeft":0 },"VerticalCableUp":{ "RotateRight":0,"RotateLeft":0 },"HorizontalRight":{ "RotateRight":0,"RotateLeft":0 },"Dimensions":{"Unit":"cm","Value":0.00}}</value>
+            </setting>
+            <setting name="SchickCalibration" serializeAs="String">
+                <value>{"VerticalCableDown":{"RotateRight":0,"RotateLeft":1},"HorizontalLeft":{"RotateRight":0,"RotateLeft":0},"VerticalCableUp":{"RotateRight":1,"RotateLeft":0},"HorizontalRight":{"RotateRight":2,"RotateLeft":0},"Dimensions":{"Unit":"cm","Value":0}}</value>
+            </setting>
+            <setting name="JazzTimerInMinutes" serializeAs="String">
+                <value>10</value>
+            </setting>
+            <setting name="RealmTool" serializeAs="String">
+                <value>Sensor</value>
+            </setting>
+            <setting name="GendexCalibration" serializeAs="String">
+                <value>{"VerticalCableDown":{ "RotateRight":0,"RotateLeft":0 },"HorizontalLeft":{ "RotateRight":0,"RotateLeft":0 },"VerticalCableUp":{ "RotateRight":0,"RotateLeft":0 },"HorizontalRight":{ "RotateRight":0,"RotateLeft":0 },"Dimensions":{"Unit":"cm","Value":0.00}}</value>
+            </setting>
+            <setting name="PlanmecaCalibration" serializeAs="String">
+                <value>{"VerticalCableDown":{ "RotateRight":0,"RotateLeft":0 },"HorizontalLeft":{ "RotateRight":0,"RotateLeft":0 },"VerticalCableUp":{ "RotateRight":0,"RotateLeft":0 },"HorizontalRight":{ "RotateRight":0,"RotateLeft":0 },"Dimensions":{"Unit":"cm","Value":0.00}}</value>
+            </setting>
+            <setting name="DexisExePath" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="JazzImageExtension" serializeAs="String">
+                <value>PNG</value>
+            </setting>
+            <setting name="JazzImageInvert" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="UploadAsIs_UpdateValues_Version" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="URLTrailer" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="ApplyMultiScaleEnhancement" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="ApplySharpness" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="JazzCalibration" serializeAs="String">
+                <value>{"VerticalCableDown":{"RotateRight":0,"RotateLeft":1},"HorizontalLeft":{"RotateRight":0,"RotateLeft":0},"VerticalCableUp":{"RotateRight":1,"RotateLeft":0},"HorizontalRight":{"RotateRight":2,"RotateLeft":0},"Dimensions":{"Unit":"cm","Value":0}}</value>
+            </setting>
+        </PACS.Properties.Settings>
+    </userSettings>
+  <runtime>
+    <gcServer enabled="true"/>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-10.0.0.0" newVersion="10.0.0.0"/>
+      </dependentAssembly>
+    </assemblyBinding>
+   <legacyCorruptedStateExceptionsPolicy enabled="true" />
+  </runtime>
+</configuration>
